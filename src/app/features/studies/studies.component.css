@@ -1,0 +1,23 @@
+@import url('https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css');
+
+.row {
+  position: relative;
+}
+.row::after {
+  content: "";
+  display: block;
+  height: 2px;
+  margin: 0.5rem 0;
+  background-image: linear-gradient(90deg, red, blue);
+  border-radius: 1px;
+}
+.row:last-child::after {
+  display: none;
+}
+
+.gradient-text {
+  color: transparent;
+  background: linear-gradient(to right, red, blue);
+  -webkit-background-clip: text;
+  background-clip: text;
+}

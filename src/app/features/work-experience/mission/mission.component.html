@@ -1,0 +1,25 @@
+<div class="flex items-center mb-2">
+  <p><span role="heading">Poste</span> : {{ mission().job }}</p>
+  <p class="text-sm ml-2 italic">({{ mission().timeline }})</p>
+</div>
+<p class="italic mb-2">Contexte : {{ mission().context }}</p>
+
+
+<span role="heading">Tâches effectuées : </span>
+<ul class="list-disc pl-8 mb-2">
+  @for (task of mission().tasks; track task) {
+    <li>{{ task }}</li>
+  }
+</ul>
+
+<span role="heading">Stack technique : </span>
+<ul class="flex flex-wrap items-center">
+  @for (keyword of mission().keywords; let last = $last; track keyword) {
+    <li class="inline-block">
+      <span class="italic">{{ keyword }}</span>
+      @if (!last) {
+        <span class="mx-2 text">-</span>
+      }
+    </li>
+  }
+</ul>

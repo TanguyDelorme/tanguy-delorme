@@ -1,42 +1,19 @@
-<section class=" p-8 min-h-screen">
-  <div>
-    <div class="flex flex-col items-center gap-10">
-      <div class="relative grid gap-6 p-10 rounded-2xl font-sans text-[#444447] shadow-2xl w-10/12"
-           style="grid-template:'title icon' 'content content'/1fr auto;">
-        <div class="title text-[1.5rem] font-medium uppercase break-words self-end" style="grid-area:title;">Diplômes</div>
-        <div class="icon text-5xl" style="grid-area:icon;">
-          <i class="fa-solid fa-graduation-cap gradient-text"></i>
-        </div>
-        <div class="content" style="grid-area:content;">
-          <p class="row">Bac S - Champagnat - 2015 - 2019</p>
-          <p class="row">DUT Génie électronique et informatique industrielle - Télécom Saint-Etienne - 2013 - 2015</p>
-          <p>Ingénieur Télécom Saint-Etienne - Développement web et vision industrielle - 2015 - 2019</p>
-        </div>
-      </div>
+<section class="p-8 min-h-screen flex flex-col items-center gap-10">
+  <app-studies-card
+    [title]="diploma().title"
+    [iconClass]="diploma().iconClass"
+    [items]="diploma().items">
+  </app-studies-card>
 
-      <div class="relative grid gap-6 p-10 rounded-2xl font-sans text-[#444447] shadow-2xl w-10/12"
-           style="grid-template:'title icon' 'content content'/1fr auto;">
-        <div class="icon text-5xl" style="grid-area:icon;">
-          <i class="fa-solid fa-chalkboard-user gradient-text"></i>
-        </div>
-        <div class="title text-[1.5rem] font-medium uppercase break-words self-end" style="grid-area:title;">Formations</div>
-        <div class="content" style="grid-area:content;">
-          <p>VueJs 3 - M2i</p>
-        </div>
-      </div>
+  <app-studies-card
+    [title]="formation().title"
+    [iconClass]="formation().iconClass"
+    [items]="formation().items">
+  </app-studies-card>
 
-      <div class="relative grid gap-6 p-10 rounded-2xl font-sans text-[#444447] shadow-2xl w-10/12"
-           style="grid-template:'title icon' 'content content'/1fr auto;">
-        <div class="title text-[1.5rem] font-medium uppercase break-words self-end" style="grid-area:title;">Certifications</div>
-        <div class="icon text-5xl" style="grid-area:icon;">
-          <i class="fa-solid fa-file-certificate gradient-text"></i>
-        </div>
-        <div style="grid-area:content;">
-          <p class="row">Safe</p>
-          <p>Scrum Dev</p>
-        </div>
-      </div>
-    </div>
-  </div>
+  <app-studies-card
+    [title]="certification().title"
+    [iconClass]="certification().iconClass"
+    [items]="certification().items">
+  </app-studies-card>
 </section>
-

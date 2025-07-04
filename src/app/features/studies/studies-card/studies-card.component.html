@@ -1,0 +1,14 @@
+<div class="relative grid gap-6 p-10 rounded-2xl font-sans text-[#444447] shadow-2xl"
+     style="grid-template:'title icon' 'content content'/1fr auto;">
+  <div class="title text-[1.5rem] font-medium uppercase break-words self-end" style="grid-area:title;">
+    {{ title() }}
+  </div>
+  <div class="icon text-5xl" style="grid-area:icon;">
+    <i [class]="iconClass() + ' gradient-text'"></i>
+  </div>
+  <div class="content" style="grid-area:content;">
+    @for (item of items(); let last = $last; track item) {
+      <p [class.row]="!last">{{ item }}</p>
+    }
+  </div>
+</div>

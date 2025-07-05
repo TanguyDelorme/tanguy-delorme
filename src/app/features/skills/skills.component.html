@@ -1,1 +1,19 @@
-<p>skills works!</p>
+<table mat-table [dataSource]="techDataSource" class="mat-elevation-z8">
+  <ng-container matColumnDef="label">
+    <th mat-header-cell *matHeaderCellDef> Compétence </th>
+    <td mat-cell *matCellDef="let element"> {{element.label}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="star">
+    <th mat-header-cell *matHeaderCellDef> Note / 5 </th>
+    <td mat-cell *matCellDef="let element"> <app-star [rating]="element.star"></app-star> </td>
+  </ng-container>
+
+  <ng-container matColumnDef="type">
+    <th mat-header-cell *matHeaderCellDef> Thème </th>
+    <td mat-cell *matCellDef="let element"><p-tag [severity]="getSeverityByType(element.type)" [value]="element.type" /></td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

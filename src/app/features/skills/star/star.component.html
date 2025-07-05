@@ -1,0 +1,5 @@
+<div class="flex space-x-1">
+  @for (star of starsArray; let i = $index; track $index) {
+    <i class="fa fa-star text-xl transition-transform duration-150" [ngClass]="{ 'text-yellow-400': isActive(i) }"></i>
+  }
+</div>

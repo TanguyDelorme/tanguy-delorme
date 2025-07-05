@@ -1,0 +1,19 @@
+<p-card [style]="{ width: '25rem', overflow: 'hidden' }">
+  <ng-template #header>
+    <div [class]="value().class">
+      <img alt="image" class="h-[200px] w-1/2 mx-auto block" [src]="'assets/' + value().image"/>
+    </div>
+  </ng-template>
+  <ng-template #title> {{ value().title }} </ng-template>
+  <ng-template #subtitle> {{ value().keywords }} </ng-template>
+  <p> {{ value().description }} </p>
+  <ng-template #footer>
+    <div class="flex gap-4 mt-1 italic">
+      <a [href]="value().url" target="_blank">{{ value().urlLabel }}</a>
+      @if (value().github) {
+        <a [href]="value().github" target="_blank">Code github</a>
+      }
+    </div>
+
+  </ng-template>
+</p-card>

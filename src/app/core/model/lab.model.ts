@@ -6,5 +6,5 @@ export interface LabModel {
   url: string;
   urlLabel: string;
   image: string;
-  class: string;
+  class?: string;
 }

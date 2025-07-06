@@ -16,9 +16,9 @@ export class AppComponent {
   private domSanitizer: DomSanitizer = inject(DomSanitizer)
 
   constructor() {
-    this.matIconRegistry.addSvgIcon(`studies`, this.domSanitizer.bypassSecurityTrustResourceUrl("/assets/studies.svg"));
-    this.matIconRegistry.addSvgIcon(`work-experience`, this.domSanitizer.bypassSecurityTrustResourceUrl("/assets/work-experience.svg"));
-    this.matIconRegistry.addSvgIcon(`lab`, this.domSanitizer.bypassSecurityTrustResourceUrl("/assets/lab.svg"));
-    this.matIconRegistry.addSvgIcon(`skills`, this.domSanitizer.bypassSecurityTrustResourceUrl("/assets/skills.svg"));
+    this.matIconRegistry.addSvgIcon(`studies`, this.domSanitizer.bypassSecurityTrustResourceUrl("assets/studies.svg"));
+    this.matIconRegistry.addSvgIcon(`work-experience`, this.domSanitizer.bypassSecurityTrustResourceUrl("assets/work-experience.svg"));
+    this.matIconRegistry.addSvgIcon(`lab`, this.domSanitizer.bypassSecurityTrustResourceUrl("assets/lab.svg"));
+    this.matIconRegistry.addSvgIcon(`skills`, this.domSanitizer.bypassSecurityTrustResourceUrl("assets/skills.svg"));
   }
 }

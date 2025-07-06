@@ -40,6 +40,15 @@ export class LabComponent {
     github: 'https://github.com/TanguyDelorme/installation-agricole',
     urlLabel: 'Aller sur le site',
     image: 'installation-agricole.png',
-    class: ''
+  });
+
+  tanguy: WritableSignal<LabModel> = signal({
+    title: 'Portfolio Tanguy DELORME',
+    keywords: 'CV',
+    description: 'Portfolio expliquant mes expériences, compétences et quelques projets perso que j\'ai réalisés. N\'hésitez aps à me contacter pour toutes proposition de mission',
+    url: 'https://tanguydelorme.github.io/tanguy-delorme/',
+    github: 'https://github.com/TanguyDelorme/tanguy-delorme',
+    urlLabel: 'Aller sur le site',
+    image: 'me.jpg',
   });
 }

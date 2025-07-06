@@ -19,7 +19,7 @@ export class WorkExperienceComponent {
     cats: WritableSignal<WorkExperienceModel>  = signal({
       timeline: 'Depuis novembre 2024',
       job: 'Développeur front-end',
-      client: 'Crédit Agricole Technology Services',
+      client: 'Crédit Agricole (CATS)',
       tasks: [
         'Corrections de bugs',
         'Développement en autonomie de nouvelles fonctionalités',

@@ -1,6 +1,10 @@
-<div class="flex items-center mb-2">
-  <p><span role="heading">Poste</span> : {{ mission().job }}</p>
-  <p class="text-sm ml-2 italic">({{ mission().timeline }})</p>
+<div class="flex flex-wrap items-center mb-2">
+  <span class="mr-2">
+    Poste : {{ mission().job }}
+  </span>
+  <span class="text-sm italic">
+    ({{ mission().timeline }})
+  </span>
 </div>
 <p class="italic mb-2">Contexte : {{ mission().context }}</p>
 

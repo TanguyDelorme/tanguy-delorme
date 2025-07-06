@@ -1,7 +1,10 @@
-<a [href]="link()" class="card" [ngClass]="cssClass()">
-  <div class="overlay"></div>
-  <div class="circle">
+<a [href]="link()" class="card w-[220px] h-[321px] bg-white rounded-[10px] overflow-hidden flex flex-col justify-center items-center
+    relative shadow-[0_14px_26px_rgba(0,0,0,0.04)] transition-all duration-300 ease-out no-underline" [ngClass]="cssClass()">
+  <div class="overlay z-0 absolute w-[118px] h-[118px] rounded-full"
+    [ngStyle]="{'background': 'var(--bg-color)', 'top': '70px', 'left': '50px'}"
+  ></div>
+  <div class="circle relative z-10 flex items-center justify-center bg-white border-2 w-[131px] h-[131px] rounded-full transition-all duration-300 ease-out" style="border-color: var(--bg-color);">
     <mat-icon [svgIcon]="svgIcon()" [ngClass]="iconClass()"></mat-icon>
   </div>
-  <p>{{ label() }}</p>
+  <p class="relative z-10">{{ label() }}</p>
 </a>

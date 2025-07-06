@@ -1,12 +1,13 @@
 import {Component, input} from '@angular/core';
 import {MatIcon} from '@angular/material/icon';
-import {NgClass} from '@angular/common';
+import {NgClass, NgStyle} from '@angular/common';
 
 @Component({
   selector: 'app-card-home',
   imports: [
     MatIcon,
-    NgClass
+    NgClass,
+    NgStyle
   ],
   templateUrl: './card-home.component.html',
   styleUrl: './card-home.component.css'

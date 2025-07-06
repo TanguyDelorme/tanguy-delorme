@@ -26,21 +26,6 @@
   --box-shadow-color: rgba(220, 233, 255, 0.48);
 }
 
-.card {
-  width: 220px;
-  height: 321px;
-  background: #fff;
-  border-radius: 10px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  box-shadow: 0 14px 26px rgba(0,0,0,0.04);
-  transition: all 0.3s ease-out;
-  text-decoration: none;
-}
 
 .card:hover {
   transform: translateY(-5px) scale(1.005) translateZ(0);
@@ -71,39 +56,12 @@
   0 15px 24px var(--box-shadow-color);
 }
 
-.card p {
-  font-size: 17px;
-  color: #4C5656;
-  margin-top: 30px;
-  z-index: 1000;
-  transition: color 0.3s ease-out;
-}
-
-.circle {
-  width: 131px;
-  height: 131px;
-  border-radius: 50%;
-  background: #fff;
-  border: 2px solid var(--bg-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  z-index: 1;
-  transition: all 0.3s ease-out;
-}
-
 .circle:after {
   content: "";
-  width: 118px;
-  height: 118px;
-  display: block;
-  position: absolute;
+  @apply w-[118px] h-[118px] block absolute rounded-full transition-all duration-300 ease-out;
   background: var(--bg-color);
-  border-radius: 50%;
   top: 5px;
   left: 5px;
-  transition: opacity 0.3s ease-out;
 }
 
 .circle svg {
@@ -112,45 +70,10 @@
 }
 
 .overlay {
-  width: 118px;
-  position: absolute;
-  height: 118px;
-  border-radius: 50%;
-  background: var(--bg-color);
-  top: 70px;
-  left: 50px;
-  z-index: 0;
   transition: transform 0.3s ease-out;
 }
 
-.education-icon {
-  width: 71px;
-  height: 76px;
-  font-size: 76px;
-  color: #D98A19;
-  z-index: 2;
-}
-
-.work-experience-icon {
-  width: 71px;
-  height: 76px;
-  font-size: 76px;
-  color: #59A785;
-  z-index: 2;
-}
-
-.lab-icon {
-  width: 71px;
-  height: 76px;
-  font-size: 76px;
-  color: #CEB2FC;
-  z-index: 2;
-}
-
-.skills-icon {
-  width: 71px;
-  height: 76px;
-  font-size: 76px;
-  color: #DCE9FF;
-  z-index: 2;
-}
+.education-icon { @apply w-[71px] h-[76px] text-[76px] z-[2] text-[#D98A19]; }
+.work-experience-icon { @apply w-[71px] h-[76px] text-[76px] z-[2] text-[#59A785]; }
+.lab-icon { @apply w-[71px] h-[76px] text-[76px] z-[2] text-[#CEB2FC]; }
+.skills-icon { @apply w-[71px] h-[76px] text-[76px] z-[2] text-[#DCE9FF]; }

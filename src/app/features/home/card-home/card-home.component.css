@@ -56,10 +56,20 @@
   0 15px 24px var(--box-shadow-color);
 }
 
+.card p {
+  font-size: 17px;
+  color: #4C5656;
+  margin-top: 30px;
+  z-index: 1000;
+  transition: color 0.3s ease-out;
+}
+
+
 .circle:after {
   content: "";
-  @apply w-[118px] h-[118px] block absolute rounded-full transition-all duration-300 ease-out;
+  @apply w-[118px] h-[118px] block absolute rounded-full;
   background: var(--bg-color);
+  transition: all 0.3s ease-out;
   top: 5px;
   left: 5px;
 }

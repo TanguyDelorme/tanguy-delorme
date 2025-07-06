@@ -4,6 +4,7 @@ import {MatTableDataSource, MatTableModule} from '@angular/material/table';
 import {SkillsModel} from '../../core/model/skills.model';
 import {TypeSkillEnum} from '../../core/enum/type-skill.enum';
 import {Tag} from 'primeng/tag';
+import { trigger, transition, style, animate } from '@angular/animations';
 
 @Component({
   selector: 'app-skills',
@@ -13,7 +14,17 @@ import {Tag} from 'primeng/tag';
     Tag
   ],
   templateUrl: './skills.component.html',
-  styleUrl: './skills.component.css'
+  styleUrl: './skills.component.css',
+  animations: [
+    trigger('slideInFromLeft', [
+      transition(':enter', [
+        style({ transform: 'translateX(-100vw)', opacity: 0 }),
+        animate('0.5s 0.3s cubic-bezier(0.4,0,0.2,1)',
+          style({ transform: 'translateX(0)', opacity: 1 })
+        )
+      ])
+    ])
+  ]
 })
 export class SkillsComponent {
   displayedColumns: string[] = ['label', 'star', 'type'];

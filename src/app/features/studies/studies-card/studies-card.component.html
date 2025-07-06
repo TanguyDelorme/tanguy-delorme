@@ -2,7 +2,7 @@
   <div class="title text-lg sm:text-xl md:text-[1.5rem] font-medium uppercase break-words self-end" style="grid-area:title;">
     {{ title() }}
   </div>
-  <div class="icon animated-icon text-3xl sm:text-4xl md:text-5xl" style="grid-area:icon;">
+  <div class="icon text-3xl sm:text-4xl md:text-5xl gradient-text" style="grid-area:icon;" @fadeInUp>
     <i [class]="iconClass() + ' gradient-text'"></i>
   </div>
   <div class="content" style="grid-area:content;">

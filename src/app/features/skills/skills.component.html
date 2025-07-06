@@ -6,7 +6,7 @@
 
   <ng-container matColumnDef="star">
     <th mat-header-cell *matHeaderCellDef> Note / 5 </th>
-    <td mat-cell *matCellDef="let element"> <app-star [rating]="element.star"></app-star> </td>
+    <td mat-cell *matCellDef="let element"> <app-star  @slideInFromLeft [rating]="element.star"></app-star> </td>
   </ng-container>
 
   <ng-container matColumnDef="type">

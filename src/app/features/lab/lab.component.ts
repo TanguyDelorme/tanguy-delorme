@@ -8,7 +8,7 @@ import {LabModel} from '../../core/model/lab.model';
     LabCardComponent
   ],
   templateUrl: './lab.component.html',
-  styleUrl: './lab.component.css'
+  styleUrl: './lab.component.css',
 })
 export class LabComponent {
   pokecarcollect: WritableSignal<LabModel> = signal({
@@ -49,6 +49,6 @@ export class LabComponent {
     url: 'https://tanguydelorme.github.io/tanguy-delorme/',
     github: 'https://github.com/TanguyDelorme/tanguy-delorme',
     urlLabel: 'Aller sur le site',
-    image: 'me.jpg',
+    image: 'me-troll.jpg',
   });
 }

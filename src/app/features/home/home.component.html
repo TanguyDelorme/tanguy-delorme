@@ -1,33 +1,72 @@
-<div class="flex justify-center items-center gap-10 flex-wrap h-full">
-  <app-card-home
-    link="studies"
-    cssClass="studies"
-    svgIcon="studies"
-    iconClass="education-icon"
-    label="Etudes">
-  </app-card-home>
+<section class="flex flex-col gap-10">
+  <div class="relative flex items-center border-4 rounded-full overflow-hidden w-full group" style="border-color: var(--color-header-bg); background: white; min-height: 300px;">
+    <!-- Bloc par défaut -->
+    <div class="absolute inset-0 flex items-center w-full h-full transition-transform duration-500 ease-in-out group-hover:-translate-x-full z-10">
+      <img alt="image" class="h-[300px] w-[300px] rounded-full object-cover" src="assets/me.jpg"/>
+      <div class="flex-1 px-6">
+        <p class="text-gray-700 mb-5">
+          👋 Salut ! Je suis <b>Tanguy</b>, ingénieur en développement web depuis 2019. Développeur fullstack passionné,
+          j’ai une forte appétence pour le <b>front-end</b> et une expertise reconnue sur le framework <b>Angular</b> pour la partie front, ainsi que sur Java Spring Boot côté back-end.
+        </p>
+        <p>
+          Disponible pour des missions ambitieuses en tant que <b>lead développeur front-end, développeur front-end ou développeur fullstack</b>. Prêt à relever de nouveaux défis à Lyon 🚀
+        </p>
+      </div>
+    </div>
 
-  <app-card-home
-    link="work-experience"
-    cssClass="work-experience"
-    svgIcon="work-experience"
-    iconClass="work-experience-icon"
-    label="Expériences">
-  </app-card-home>
+    <!-- Bloc hover -->
+    <div class="absolute inset-0 flex items-center w-full h-full transition-transform duration-500 ease-in-out translate-x-full group-hover:translate-x-0 z-20">
+      <img alt="image hover" class="h-[300px] w-[300px] rounded-full object-cover" src="assets/me-troll.jpg" />
+      <div class="flex-1 px-6">
+        <p class="text-gray-700 mb-5">
+          Quand je ne code pas, tu me trouveras sûrement en train de partager un verre avec mes amis et collègues 🍻.
+          J’adore aussi surfer pendant mes vacances 🌊, voyager, découvrir de nouvelles gastronomies, et faire des blagues (plus ou moins drôles), toujours avec bonne humeur !
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="flex justify-center items-center gap-10 flex-wrap h-full">
+    <app-card-home
+      link="studies"
+      cssClass="studies"
+      svgIcon="studies"
+      iconClass="education-icon"
+      label="Etudes">
+    </app-card-home>
 
-  <app-card-home
-    link="skills"
-    cssClass="skills"
-    svgIcon="skills"
-    iconClass="skills-icon"
-    label="Compétences">
-  </app-card-home>
+    <app-card-home
+      link="work-experience"
+      cssClass="work-experience"
+      svgIcon="work-experience"
+      iconClass="work-experience-icon"
+      label="Expériences">
+    </app-card-home>
 
-  <app-card-home
-    link="lab"
-    cssClass="lab"
-    svgIcon="lab"
-    iconClass="lab-icon"
-    label="Projets personnels">
-  </app-card-home>
-</div>
+    <app-card-home
+      link="skills"
+      cssClass="skills"
+      svgIcon="skills"
+      iconClass="skills-icon"
+      label="Compétences">
+    </app-card-home>
+
+    <app-card-home
+      link="lab"
+      cssClass="lab"
+      svgIcon="lab"
+      iconClass="lab-icon"
+      label="Projets personnels">
+    </app-card-home>
+  </div>
+
+  <div>
+    <h2 class="font-bold text-2xl">Références:</h2>
+    @for (ref of refs(); track $index) {
+      <div class="flex">
+        <p class="mr-2">{{ ref.name }}</p>
+        <p class="italic">({{ ref.company }})</p>
+      </div>
+    }
+  </div>
+</section>
+

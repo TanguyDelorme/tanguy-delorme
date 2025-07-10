@@ -14,7 +14,7 @@ export class LabComponent {
   pokecarcollect: WritableSignal<LabModel> = signal({
     title: 'PokeCardCollect',
     keywords: 'Gestion - Estimation - Scan',
-    description: 'PokecardCollect est une application Android de gestion de collection de cartes pokémon, estimation à l\'unité et de chaque séries.\n' +
+    description: 'PokecardCollect est une application Android de gestion de collection de cartes pokémon, estimation à l\'unité et par série.\n' +
       '    l\'application est développée avec Flutter firebase',
     url: 'https://play.google.com/store/apps/details?id=com.pokemon_card_lib&utm_source=emea_Med',
     urlLabel: 'Voir sur android store',
@@ -25,7 +25,7 @@ export class LabComponent {
   lorcanacardcollect: WritableSignal<LabModel> = signal({
     title: 'LorCardCollect',
     keywords: 'Gestion - Estimation - Scan',
-    description: 'LorCardCollect est une application Android de gestion de collection de cartes pokémon, estimation à l\'unité et de chaque séries. L\'application est développée avec Flutter firebase',
+    description: 'LorCardCollect est une application Android de gestion de collection de cartes pokémon, estimation à l\'unité et par série. L\'application est développée avec Flutter firebase',
     url: 'https://play.google.com/store/apps/details?id=com.lorcanacard_collect&utm_source=emea_Med',
     urlLabel: 'Voir sur android store',
     image: 'lorcardcollect.webp',
@@ -45,7 +45,7 @@ export class LabComponent {
   tanguy: WritableSignal<LabModel> = signal({
     title: 'Portfolio Tanguy DELORME',
     keywords: 'CV',
-    description: 'Portfolio expliquant mes expériences, compétences et quelques projets perso que j\'ai réalisés. N\'hésitez aps à me contacter pour toutes proposition de mission',
+    description: 'Portfolio expliquant mes expériences, compétences et quelques projets perso que j\'ai réalisés. N\'hésitez pas à me contacter pour toutes proposition de mission',
     url: 'https://tanguydelorme.github.io/tanguy-delorme/',
     github: 'https://github.com/TanguyDelorme/tanguy-delorme',
     urlLabel: 'Aller sur le site',

@@ -51,4 +51,14 @@ export class LabComponent {
     urlLabel: 'Aller sur le site',
     image: 'me-troll.jpg',
   });
+
+  event: WritableSignal<LabModel> = signal({
+    title: 'EventMaster',
+    keywords: 'Store - API REST - WebSocket',
+    description: 'Application de gestion d\'évènements, développement en cours avec Angular 20, Java 24, Docker et PostgreSQL',
+    url: '',
+    urlLabel: '',
+    github: 'https://github.com/Secret-Mysterious-Project/',
+    image: 'calendar-icon.svg',
+  });
 }
